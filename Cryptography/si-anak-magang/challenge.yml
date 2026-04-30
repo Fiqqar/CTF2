@@ -1,0 +1,28 @@
+name: "si anak magang"
+author: "pepeny"
+category: Cryptography
+value: 500
+type: dynamic
+
+description: |
+  Ada anak magang baru di Polytron, dia disuruh nyimpen password database tapi malah diacak-acak. 
+  Katanya sih cuma dibalik, terus di-encode pake 16 sama dasar 64. 
+  Bisa tolong balikin filenya? Dia mau pamer ke anak PPLG soalnya.
+  
+  **Cipher:** `66573576636e52356247397758326c6b5832647559576468625639755a5764755a584266645774686530644d5546413d`
+
+extra:
+    initial: 500
+    decay: 20
+    minimum: 50
+
+flags:
+    - PPLG{aku_pengen_magang_di_polytron}
+
+tags:
+    - cryptography
+    - hashing
+    - python
+
+state: visible
+version: "0.1"

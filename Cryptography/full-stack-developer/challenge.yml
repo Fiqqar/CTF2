@@ -1,0 +1,38 @@
+name: "Full Stack Developer"
+author: "pepeny"
+category: Cryptography
+value: 750
+type: dynamic
+
+description: |
+  Seorang murid PPLG di SMK Raden Umar Said baru saja mengamankan bahasa pemrograman favoritnya.
+  
+  Dia bilang:
+  1. Bahasanya ada di list `languages.txt` dan diubah ke **lowercase**.
+  2. Dia nambahin **salt** berupa angka hexadecimal (antara **0 - 511**) di bagian akhir.
+  3. Dia pake encoding **UTF-16 Little Endian** pas nge-hash.
+  
+  Bisa tebak bahasa apa yang dia pelajarin?
+  
+  **Format Flag:** `PPLG{}`
+
+extra:
+    initial: 750 # Gue samain dengan value di atas biar konsisten
+    decay: 20
+    minimum: 50
+
+files:
+    - program.py
+    - languages.txt # Gue ubah dari list.txt biar sesuai sama deskripsi lo
+
+flags:
+    - PPLG{belajar_l4gi_d3k}
+
+tags:
+    - cryptography
+    - hashing
+    - python
+    - utf-16le
+
+state: visible
+version: "0.1"

@@ -1,0 +1,16 @@
+Python
+JavaScript
+C++
+Rust
+C#
+Go
+Java
+PHP
+Swift
+Kotlin
+Zig
+Solidity
+Assembly
+Cobol
+Pascal
+Fortran

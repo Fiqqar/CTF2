@@ -1,0 +1,33 @@
+name: "kantin oma"
+author: "pepeny"
+category: Misc
+value: 1000
+type: dynamic
+
+description: |
+  Admin IT SMK Raden Umar Said menemukan sebuah file asset gambar lama dari projek **Oma's Canteen**. 
+  Anehnya, file ini memiliki perilaku ganda. Jika dibuka, ia tampil sebagai gambar biasa, namun sistem mendeteksinya sebagai file yang bisa dieksekusi.
+  
+  "Ada mesin virtual tersembunyi di balik pixel-pixel ini," gumam si admin sebelum menyerah.
+  
+  Dapatkan kamu membedah struktur file ini, menjalankan 'mesin' di dalamnya, dan mendapatkan resep rahasia (flag) Oma? 
+  
+  **Note:** Kamu mungkin perlu melihat lebih dalam dari sekadar apa yang tampak di layar.
+  
+
+extra:
+    initial: 1000
+    decay: 50
+    minimum: 100
+
+flags:
+    - PPLG{0m4_c4nt33n_53cr3t_vM}
+
+tags:
+    - hard
+    - polyglot
+    - forensics
+    - zip-execution
+    - xor-cipher
+
+state: visible

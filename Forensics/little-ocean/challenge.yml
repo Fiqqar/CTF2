@@ -1,0 +1,28 @@
+name: "Little Ocean"
+author: "pepeny"
+category: Forensics
+value: 500
+type: dynamic
+
+description: |
+  Seorang player Little Ocean menemukan sebuah file cursor yang tampak berkilau beda dari biasanya. 
+  Katanya, ada kode rahasia yang disisipkan di antara tiap pixel aset game ini oleh sang penciptanya.
+  
+  Dapatkah kamu menyelam ke dalam pixel-pixel tersebut dan menemukan kodenya?
+
+extra:
+    initial: 500
+    decay: 10
+    minimum: 50
+
+flags:
+    - PPLG{4ku_p3ngen_main_little_0cean}
+
+tags:
+    - easy
+    - forensics
+    - lsb-steganography
+    - little-ocean
+
+state: visible
+version: "0.1"

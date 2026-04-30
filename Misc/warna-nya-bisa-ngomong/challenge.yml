@@ -1,0 +1,32 @@
+name: "warna nya bisa ngomong"
+author: "pepeny"
+category: Misc
+value: 750
+type: dynamic
+
+description: |
+  Seorang seniman dari proyek game besar di Indonesia meninggalkan sebuah file gambar misterius dan sebuah script generator.
+  
+  Meskipun script generator yang dibagikan hanya berisi *fake flag*, logika enkripsinya tetap sama dengan yang digunakan pada file `mysterious_sprite.png` yang asli.
+  
+  "Gunakan matamu untuk melihat warna, tapi gunakan otakmu untuk menerjemahkan suaranya."
+  
+  Bisakah kamu merekayasa balik (reverse) logika script tersebut untuk mengekstrak pesan tersembunyi di baris pixel paling atas?
+
+extra:
+    initial: 750
+    decay: 35
+    minimum: 150
+
+flags:
+    - PPLG{warna_nya_b1sa_ng0mong}
+
+tags:
+    - medium
+    - steganography
+    - brainfuck
+    - scripting
+    - white-box
+
+state: visible
+version: "0.1"

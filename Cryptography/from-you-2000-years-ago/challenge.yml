@@ -1,0 +1,34 @@
+name: "From You, 2000 Years Ago"
+author: "pepeny"
+category: Cryptography
+value: 1000
+type: dynamic
+
+description: |
+    Dia meninggalkan pesan terakhirnya yang diukir di sebuah batu rahasia untuk mengungkap kebenaran dunia. 
+    Namun, setelah 2000 tahun berlalu, tulisan itu telah terkunci oleh mekanisme kuno yang sangat identik dengan angka "2000" itu sendiri.
+
+    Coba pecahkan kodenya untuk menemukan lokasi menuju batu keramat tersebut!
+
+    **Data Terdeteksi:**
+    - **Ciphertext**: `81ca7d85cef7e78d0e34c709775e221ee2d96247df70be6dd52574df45d5291d0228e20ecdf0db87a06fecbca99255658054f51ffefb40c9d63953088171363ba1bd41e6e420f9b277a2fa60f17f727ed7e0`
+    - **Tag**: `7ce83465082df66e24f2ec35b772736d`
+
+    *Hint: "Identitas kita di sekolah ini" dan angka keberuntungan "2000" yang suci.*
+
+extra:
+    initial: 1000
+    decay: 50
+    minimum: 100
+
+flags:
+    - PPLG{to_y0u_2000_y3ars_fr0m_now}
+
+tags:
+    - hard
+    - aes-gcm
+    - forensics
+    - logic
+
+state: visible
+version: "0.1"

@@ -1,0 +1,30 @@
+name: "horee mbg datang"
+author: "pepeny"
+category: Forensics
+value: 750
+type: dynamic
+
+description: |
+    Seluruh siswa di sekolah sangat antusias karena program Makan Bergizi Gratis (MBG) akhirnya dimulai hari ini! 
+    Petugas kantin mengirimkan daftar menu bergizi melalui sebuah file arsip biner, namun sayang filenya mengalami kerusakan data saat dikirim via grup WhatsApp sekolah.
+
+    Header filenya hilang entah kemana, menyisakan tumpukan biner misterius. Bisakah kamu menyelamatkan gambar menu tersebut dan melihat apa yang akan dimakan siswa hari ini?
+
+    **File:** horee_mbg_datang.dat
+
+extra:
+    initial: 750
+    decay: 25
+    minimum: 100
+
+flags:
+    - PPLG{d33p_s34_c4rv1ng_4dv3n7ur3}
+
+tags:
+    - medium
+    - file-carving
+    - mbg-2026
+    - hex-analysis
+
+state: visible
+version: "0.1"

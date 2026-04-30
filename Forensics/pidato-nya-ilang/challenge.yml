@@ -1,0 +1,28 @@
+name: "pidato nya ilang"
+author: "pepeny"
+category: Forensics
+value: 1000
+type: dynamic
+
+description: |
+  Seorang pejabat penting panik karena naskah pidato rahasianya hilang dari flashdisk setelah seseorang melakukan 'Quick Format'. 
+  Untungnya, tim IT berhasil mengambil salinan biner (Disk Image) dari flashdisk tersebut sebelum data tertimpa aset lain.
+  
+  Dapatkah kamu melakukan analisis mendalam pada sistem file ini dan membangkitkan kembali naskah pidato yang hilang tersebut?
+
+extra:
+    initial: 1000
+    decay: 50
+    minimum: 200
+
+flags:
+    - PPLG{lost-in_1mg}
+
+tags:
+    - hard
+    - disk-forensics
+    - deleted-file
+    - fat32-analysis
+
+state: visible
+version: "0.1"
