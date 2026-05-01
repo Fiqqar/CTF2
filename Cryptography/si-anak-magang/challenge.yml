@@ -9,7 +9,7 @@ description: |
   Katanya sih cuma dibalik, terus di-encode pake 16 sama dasar 64. 
   Bisa tolong balikin filenya? Dia mau pamer ke anak PPLG soalnya.
   
-  **Cipher:** `66573576636e52356247397758326c6b5832647559576468625639755a5764755a584266645774686530644d5546413d`
+  **Cipher:** `6657747062584e766131397a595852706447356c5832467459584e795a574a66626d397964486c736233426661575266624774776530644d5546413d`
 
 extra:
     initial: 500
@@ -17,7 +17,7 @@ extra:
     minimum: 50
 
 flags:
-    - PPLG{aku_pengen_magang_di_polytron}
+    - PPLG{pkl_di_polytron_bersama_entitas_kosmik}
 
 tags:
     - cryptography

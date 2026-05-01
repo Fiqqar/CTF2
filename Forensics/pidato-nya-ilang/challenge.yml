@@ -16,13 +16,13 @@ extra:
     minimum: 200
 
 flags:
-    - PPLG{lost-in_1mg}
+    - PPLG{t3rimakasih_at4s_p3rhat1an_nya}
 
 tags:
     - hard
     - disk-forensics
     - deleted-file
-    - fat32-analysis
+    - ntfs
 
 state: visible
 version: "0.1"

@@ -23,7 +23,7 @@ extra:
 
 files:
     - program.py
-    - languages.txt # Gue ubah dari list.txt biar sesuai sama deskripsi lo
+    - languages.txt
 
 flags:
     - PPLG{belajar_l4gi_d3k}

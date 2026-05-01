@@ -2,7 +2,7 @@ import base64
 
 def generate_easy():
     # Flag original
-    flag = "PPLG{aku_pengen_magang_di_polytron}"
+    flag = "PPLG{pkl_di_polytron_bersama_entitas_kosmik}"
     
     # 1. Reverse String
     rev = flag[::-1]
