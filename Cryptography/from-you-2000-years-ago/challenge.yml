@@ -5,16 +5,15 @@ value: 1000
 type: dynamic
 
 description: |
-    Dia meninggalkan pesan terakhirnya yang diukir di sebuah batu rahasia untuk mengungkap kebenaran dunia. 
-    Namun, setelah 2000 tahun berlalu, tulisan itu telah terkunci oleh mekanisme kuno yang sangat identik dengan angka "2000" itu sendiri.
+    anak magang nemu sebuah pesan misterius di tembok tua yang katanya berasal dari 2000 tahun yang lalu. Pesan itu ternyata adalah sebuah flag yang dienkripsi menggunakan kunci rahasia yang hanya bisa diketahui dengan memecahkan teka-teki berikut: 
 
-    Coba pecahkan kodenya untuk menemukan lokasi menuju batu keramat tersebut!
-
-    Encrypted flag
+    **Encrypted flag**
     - **Ciphertext**: `81ca7d85cef7e78d0e34c709775e221ee2d96247df70be6dd52574df45d5291d0228e20ecdf0db87a06fecbca99255658054f51ffefb40c9d63953088171363ba1bd41e6e420f9b277a2fa60f17f727ed7e0`
     - **Tag**: `7ce83465082df66e24f2ec35b772736d`
 
-    *Hint: "Identitas kita di sekolah ini" dan angka keberuntungan "2000" yang suci.*
+    **Hint:** 
+    1. Awal dari sebuah bendera kita di sini.
+    2. Angka keberuntungan "2000" yang suci, namun ia butuh 12 langkah dengan kesunyian agar bisa terbaca.
 
 extra:
     initial: 1000

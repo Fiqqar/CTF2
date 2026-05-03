@@ -1,0 +1,34 @@
+name: "enigmagang vs entitas kosmik"
+author: "pepeny"
+category: Cryptography
+value: 500
+type: dynamic
+
+description: |
+    anak magang ketemu sama entitas kosmik, terus diajak main enigma. Ternyata si anak magang ini jago banget main enigma, sampai bisa dapet benderanya.
+
+    **Machine Details:**
+    - **Rotors:** VI - I - III
+    - **Reflector:** B
+    - **Positions:** A - Q - L
+    - **Plugboard:** PN, LK, YT
+
+    **Cipher:**
+    `YQSZFLPZCGZKHQJKWCOYNDLGIOHAAVHCA`
+
+    **Note:** Flag format `PPLG{decryptedresult}`
+
+extra:
+    initial: 500
+    decay: 20
+    minimum: 50
+
+flags:
+    - PPLG{pkldipolytronbersamaentitaskosmik}
+
+tags:
+    - cryptography
+    - enigma
+
+state: visible
+version: "1.0"

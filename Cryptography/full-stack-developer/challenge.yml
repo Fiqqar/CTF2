@@ -5,16 +5,9 @@ value: 750
 type: dynamic
 
 description: |
-  Seorang murid PPLG di SMK Raden Umar Said baru saja mengamankan bahasa pemrograman favoritnya.
-  
-  Dia bilang:
-  1. Bahasanya ada di list `languages.txt` dan diubah ke **lowercase**.
-  2. Dia nambahin **salt** berupa angka hexadecimal (antara **0 - 511**) di bagian akhir.
-  3. Dia pake encoding **UTF-16 Little Endian** pas nge-hash.
-  
-  Bisa tebak bahasa apa yang dia pelajarin?
-  
-  **Format Flag:** `PPLG{}`
+    Si anak magang ini ternyata lagi belajar bahasa pemrograman baru, tapi dia lupa apa nama bahasanya. Dia cuma inget kalau dia nyimpen passwordnya pake hash SHA-256 dengan encoding UTF-16LE, terus ditambahin salt rahasia yang cuma dia yang tau.
+
+    Bisa tebak bahasa apa yang dia pelajarin?
 
 extra:
     initial: 750 # Gue samain dengan value di atas biar konsisten

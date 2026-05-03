@@ -4,19 +4,16 @@ import sys
 import os
 
 def main():
-    # Daftar bahasa pemrograman untuk tantangan
     languages = [
         "Python", "JavaScript", "C++", "Rust", "C#", "Go", "Java", 
         "PHP", "Swift", "Kotlin", "Zig", "Solidity", "Assembly", 
         "Cobol", "Pascal", "Fortran"
     ]
 
-    # Inisialisasi jawaban acak dan salt (0-511)
     secret_lang = random.choice(languages).lower()
     salt_value = random.randint(0, 511)
     salt_hex = format(salt_value, 'x')
     
-    # Generate target hash (Bahasa + Salt) menggunakan UTF-16LE
     target_payload = (secret_lang + salt_hex).encode("utf-16-le")
     target_hash = hashlib.sha256(target_payload).hexdigest()
 
@@ -42,17 +39,14 @@ def main():
         if choice == '1':
             if encrypt_limit > 0:
                 to_encrypt = input("Masukkan string yang mau di-hash: ").lower()
-                # Hashing tanpa salt untuk testing/simulasi peserta
-                res_hash = hashlib.sha256(to_encrypt.encode("utf-16-le")).hexdigest()
-                print(f"Result (SHA-256 UTF-16LE): {res_hash}\n")
+                res_hash = hashlib.sha256((to_encrypt + salt_hex).encode("utf-16-le")).hexdigest()
+                print(f"Result (SHA-256 UTF-16LE + Secret Salt): {res_hash}\n")
                 encrypt_limit -= 1
             else:
                 print("Kesempatan encrypt sudah habis. Silakan langsung tebak.\n")
 
         elif choice == '2':
             guess_lang = input("Tebak bahasanya: ").strip().lower()
-            
-            # Verifikasi input menggunakan salt rahasia yang sama
             guess_payload = (guess_lang + salt_hex).encode("utf-16-le")
             guess_hash = hashlib.sha256(guess_payload).hexdigest()
 
