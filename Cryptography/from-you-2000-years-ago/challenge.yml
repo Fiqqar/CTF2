@@ -10,7 +10,7 @@ description: |
 
     Coba pecahkan kodenya untuk menemukan lokasi menuju batu keramat tersebut!
 
-    **Data Terdeteksi:**
+    Encrypted flag
     - **Ciphertext**: `81ca7d85cef7e78d0e34c709775e221ee2d96247df70be6dd52574df45d5291d0228e20ecdf0db87a06fecbca99255658054f51ffefb40c9d63953088171363ba1bd41e6e420f9b277a2fa60f17f727ed7e0`
     - **Tag**: `7ce83465082df66e24f2ec35b772736d`
 
