@@ -14,7 +14,6 @@ def solve():
     test_str = input("String yang lo encrypt tadi: ").lower()
     received_hash = input("Hasil hash dari program: ").strip()
 
-    # Cari salt yang dipake program dengan brute-force local
     found_salt = None
     for s in range(512):
         hex_s = format(s, 'x')
@@ -28,6 +27,4 @@ def solve():
         print("[-] Salt gak ketemu. Pastikan string dan hash-nya bener.")
         return
 
-    # Sekarang tinggal tebak bahasanya
     print("\n[+] Sekarang lo bisa tebak bahasanya. Cobain satu-satu manual atau brute-force di sini.")
-    # (Opsional: Peserta bisa langsung nebak di program utama pake list bahasa yang ada)

