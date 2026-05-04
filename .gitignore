@@ -1,0 +1,17 @@
+*.rar
+*.zip
+*.7z
+*.tar.gz
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+node_modules/
+.env
+
+.vscode/
+.idea/
+.env
+*.swp
+*.swo
