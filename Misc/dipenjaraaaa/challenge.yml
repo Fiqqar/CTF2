@@ -9,11 +9,6 @@ description: |
   
   Seseorang baru saja membuat sebuah sandbox Python yang diklaim sangat aman karena menggunakan sistem blacklist kata-kata berbahaya. 
   Apakah kamu bisa membuktikan bahwa tidak ada penjara yang benar-benar kokoh bagi seorang programmer yang kreatif?
-  
-  Temukan flag yang ada di dalam file 'flag.txt'.
-  
-  **Koneksi:** nc (IP_LO) (PORT_LO)
-
 extra:
     initial: 500
     decay: 15
